@@ -1,0 +1,74 @@
+.teacher-profile-edit{
+    display: flex;
+    width: 910px;
+    justify-content: space-between;
+}
+
+.teacher-profile-display{
+    display: flex;
+    gap: 31px;
+    border: 1px solid #F0F0F0;
+    width: 630px;
+    height: 485px;
+    border-radius: 8px;
+}
+
+.teacher-profile-edit h1{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -2.5%;
+    color: #252525;
+}
+
+.teacher-profile-edit img{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.teacher-profile-about{
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    gap: 65px;
+}
+
+.teacher-profile-about img{
+    width: 200px;
+    height: 230px;
+}
+
+.teacher-profile-noedit{
+    width: 207px;
+    height: 485px;
+    background-color: #F0F0F0;
+}
+
+.teacher-profile-noedit p{
+    margin-left: 35px;
+}
+
+.teacher-profile-editor p{
+    margin-bottom: 27px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.teacher-profile-buttons {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+    margin-left: 350px;
+}
+
+.teacher-profile-buttons button{
+    width: 260px;
+    height: 56px;
+    background-color: #607AFB;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}

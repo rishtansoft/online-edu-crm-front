@@ -1,0 +1,17 @@
+{
+    "rows": [
+      { "id": 100, "parents": "Durdona Egamberdiyeva", "group": "Pre intermediate", "teacher": "Durdona Xudoberganova", "number": "+998933322222", "pay": "To'lov qilish" },
+      { "id": 101, "parents": "Durdona Egamberdiyeva", "group": "Pre intermediate", "teacher": "Muhammad Amin Xokimjonov", "number": "+998933322222", "pay": "To'lov qilish" },
+      { "id": 102, "parents": "Durdona Egamberdiyeva", "group": "Beginner", "teacher": "Abbos Qurbonaliyev", "number": "+998933322222", "pay": "To'lov qilish" },
+      { "id": 103, "parents": "Durdona Egamberdiyeva", "group": "Pre intermediate", "teacher": "Abbos Qurbonaliyev", "number": "+998933322222", "pay": "To'lov qilish" },
+      { "id": 104, "parents": "Durdona Egamberdiyeva", "group": "Pre intermediate", "teacher": "Abbos Qurbonaliyev", "number": "+998933322222", "pay": "To'lov qilish" },
+      { "id": 105, "parents": "Durdona Egamberdiyeva", "group": "Pre intermediate", "teacher": "Durdona Xudoberganova", "number": "+998933322222", "pay": "To'lov qilish" },
+      { "id": 106, "parents": "Durdona Egamberdiyeva", "group": "Pre intermediate", "teacher": "Durdona Xudoberganova", "number": "+998933322222", "pay": "To'lov qilish" },
+      { "id": 107, "parents": "Durdona Egamberdiyeva", "group": "Pre intermediate", "teacher": "Abbos Qurbonaliyev", "number": "+998933322222", "pay": "To'lov qilish" },
+      { "id": 108, "parents": "Durdona Egamberdiyeva", "group": "Pre intermediate", "teacher": "Durdona Xudoberganova", "number": "+998933322222", "pay": "To'lov qilish" },
+      { "id": 109, "parents": "Durdona Egamberdiyeva", "group": "Pre intermediate", "teacher": "Abbos Qurbonaliyev", "number": "+998933322222", "pay": "To'lov qilish" },
+      { "id": 110, "parents": "Durdona Egamberdiyeva", "group": "Pre intermediate", "teacher": "Durdona Xudoberganova", "number": "+998933322222", "pay": "To'lov qilish" },
+      { "id": 111, "parents": "Durdona Egamberdiyeva", "group": "Intermediate", "teacher": "Abbos Qurbonaliyev", "number": "+998933322222", "pay": "To'lov qilish" }
+    ]
+  }
+  
