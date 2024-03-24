@@ -11,7 +11,7 @@ export default function Teacher() {
                 <img src={edit} alt="edit" />
             </header>
             <div className={styles['teacher-profile-about']}>
-                <img src={human} alt="human" />
+                <img src={human} alt="man" />
                 <div className={styles['teacher-profile-display']}>
                     <div className={styles['teacher-profile-noedit']}>
                         <p>Ism familiya</p><hr />
