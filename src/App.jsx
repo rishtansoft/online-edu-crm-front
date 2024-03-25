@@ -34,8 +34,28 @@ function App() {
         element={<AdminDashboard />}
       />
       <ProtectedRoute
+        allowedRoles={["admin"]}
+        path="/teachers"
+        element={<AdminDashboard />}
+      />
+      <ProtectedRoute
+        allowedRoles={["admin"]}
+        path="/teachers/:teacher"
+        element={<AdminDashboard />}
+      />
+      <ProtectedRoute
+        allowedRoles={["admin"]}
+        path="/teachers/:teacher/:group"
+        element={<AdminDashboard />}
+      />
+      <ProtectedRoute
         allowedRoles={["teacher", "student"]}
         path="/teacher"
+        element={<TeacherOffice />}
+      />
+      <ProtectedRoute
+        allowedRoles={["teacher", "student"]}
+        path="/teacher/:group"
         element={<TeacherOffice />}
       />
       <ProtectedRoute
