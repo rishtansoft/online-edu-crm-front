@@ -9,12 +9,16 @@ import ErrorPage from "./pages/ErrorPage";
 import { useEffect } from "react";
 import "./App.css";
 
-function ProtectedRoute({ children, allowedRoles }) {
-  const role = 'admin';
-  const isAuthenticated = true;
+const role = 'admin';
+const isAuthenticated = false;
+
+function ProtectedRoute({ children, allowedRoles }) {  
   const navigate = useNavigate();
 
-  if (!isAuthenticated) return navigate("/login");
+  if (!isAuthenticated) {
+    navigate("/login");
+    return 
+  }
   if (!allowedRoles.includes(role)) return navigate("/unauthorized");
 
   return children;
