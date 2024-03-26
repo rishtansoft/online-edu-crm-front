@@ -31,6 +31,7 @@ function Teacher() {
               <td>Beginner 1</td>
             </tr>
             <tr>
+              
               <td>23456</td>
               <td>Durdona Egamberdiyeva</td>
               <td>Beginner 1</td>
