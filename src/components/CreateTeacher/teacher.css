@@ -1,0 +1,78 @@
+.cards-wrapper {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.teacherCardWrapper {
+  width: 330px;
+  height: 165px;
+  background-color: #ecefff;
+  border-radius: 8px;
+  padding: 20px;
+}
+.teacherCardWrapper .teacherCardWrapper-header {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.teacherCardWrapper .teacherCardWrapper-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+  margin-bottom: 4px;
+  color: #252525;
+}
+.teacherCardWrapper .teacherCardWrapper-header p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.teacherCardWrapper .teacherHeaderIcons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.teacherCardWrapper .teacherHeaderIcons img {
+  width: 20px;
+  height: 20px;
+}
+
+.teacherCardWrapper .teacherCardWrapper-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #f4a261;
+  margin-bottom: 20px;
+}
+
+.teacherCardWrapper .teacherCardWrapper-main p {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.teacherCardWrapper .teacherCardWrapper-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.teacherCardWrapper .teacherCardWrapper-footer .teacherCardWrapper-data,
+.teacherCardWrapper .teacherCardWrapper-footer .teacherCardWrapper-phon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.teacherCardWrapper .teacherCardWrapper-footer .teacherCardWrapper-phon {
+  padding: 5px 10px;
+  background-color: #d8deff;
+  border-radius: 21px;
+}
