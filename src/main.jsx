@@ -2,7 +2,7 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
-import store from "./store";
+import store from "./redux/store.js";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(

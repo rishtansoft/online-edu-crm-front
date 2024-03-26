@@ -1,14 +1,17 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
-import Login from "./Login";
-import AdminDashboard from "./AdminDashboard";
-import TeacherOffice from "./TeacherOffice";
-import StudentOffice from "./StudentOffice";
-import ErrorPage from "./error";
-import { isAuthenticated, role } from "./auth";
-import "./App.css";
+
+import Login from "./pages/Login";
+import AdminDashboard from "./pages/AdminDashboard";
+import TeacherMainPage from "./pages/TeacherMainPage";
+import StudentMainPage from "./pages/StudentMainPage";
+import ErrorPage from "./pages/ErrorPage";
+
 import { useEffect } from "react";
+import "./App.css";
 
 function ProtectedRoute({ children, allowedRoles }) {
+  const role = 'admin';
+  const isAuthenticated = true;
   const navigate = useNavigate();
 
   if (!isAuthenticated) return navigate("/login");
@@ -51,17 +54,17 @@ function App() {
       <ProtectedRoute
         allowedRoles={["teacher", "student"]}
         path="/teacher"
-        element={<TeacherOffice />}
+        element={<TeacherMainPage />}
       />
       <ProtectedRoute
         allowedRoles={["teacher", "student"]}
         path="/teacher/:group"
-        element={<TeacherOffice />}
+        element={<TeacherMainPage />}
       />
       <ProtectedRoute
         allowedRoles={["student"]}
         path="/student"
-        element={<StudentOffice />}
+        element={<StudentMainPage />}
       />
       <Route path="*" element={<ErrorPage />} />
     </Routes>
