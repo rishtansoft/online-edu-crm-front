@@ -12,12 +12,12 @@ function App() {
 
   useEffect(() => {
     setPathname(window.location.pathname);
-    console.log(pathname);
+    console.log(15,pathname);
   }, []);
 
   return (
     <>
-      {pathname === "/Teacher" ? ( 
+      {pathname === "/teacher" ? ( 
         <Teacher></Teacher>
       ) : ( 
         <div className={styles['teacher']}>
@@ -29,7 +29,7 @@ function App() {
             <Routes>
               <Route path='/group' element={<Group />} />
               <Route path='/students' element={<Students />} />
-              {/* <Route path='/Teacher' element={<Teacher />} /> */}
+
             </Routes>
           </div>
         </div>

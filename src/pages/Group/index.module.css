@@ -1,0 +1,41 @@
+body{
+    font-family: Inter;
+}
+
+.Group button{
+    background-color: #F4A261;
+    border: none;
+    color: white;
+    width: 250px;
+    font-size: 18px;
+    cursor: pointer;
+    height: 50px;
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-left: 1200px;
+}
+.Group table {
+    width: 1481px;
+    margin-top: 50px;
+    margin-left: 35px;
+}
+
+th,
+td {
+    padding: 8px;
+    margin-top: 5px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+

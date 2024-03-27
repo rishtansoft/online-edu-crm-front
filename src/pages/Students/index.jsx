@@ -25,7 +25,6 @@ export default function Students() {
           </button>
         </div>
       </div>
-      <h2>Payments Table</h2>
       <table>
         <thead>
           <tr>
