@@ -1,7 +1,10 @@
+import styles from "./index.module.css" 
 
 function Group() {
   return (
-    <div>Group</div>
+    <div>
+      <h1>Group</h1>
+    </div>
   )
 }
 
