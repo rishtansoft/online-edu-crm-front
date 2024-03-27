@@ -1,7 +1,7 @@
 import styles from './index.module.css';
 
 export default function ModalContent({ onClose }) {
-    
+
     function handelclick() {
         const groupName = document.getElementById('group-name').value;
         const groupId = document.getElementById('group-id').value;
@@ -9,10 +9,10 @@ export default function ModalContent({ onClose }) {
         const groupTime = document.getElementById('group-time').value;
 
         if (groupName && groupId && groupDirection && groupTime) {
-            alert('hello');
+            alert('muvaffaqiyatli qoshildi');
         } else {
 
-            alert('Please fill in all fields.');
+            alert('bosh maydonlar mavjud');
         }
     }
 
