@@ -1,35 +1,121 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import { Route, Routes, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import "./App.css";
+import LoginPage from "./pages/login";
+import HomePage from "./pages/home";
+import ErrorPage from "./pages/errorPage";
+import TeachersPage from "./pages/teachers";
+import TeacherPage from "./pages/teacher";
+import StudentPage from "./pages/student";
+import Group from "./pages/group";
+import { useSelector } from "react-redux";
 function App() {
-  const [count, setCount] = useState(0)
+  const token = useSelector((state) => state.userToken.token);
+  const role = useSelector((state) => state.userToken.role);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      navigate("/login");
+    }
+  }, []);
+
+  function ProtectedRoute({
+    children,
+    redirectTo = "/login",
+    isAuthentication,
+  }) {
+    useEffect(() => {
+      if (!isAuthentication) {
+        return navigate(redirectTo);
+      }
+    }, [isAuthentication, navigate, redirectTo]);
+
+    return children;
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        {token !== null && role === "admin" && (
+          <>
+            <Route
+              path="/"
+              element={
+                <ProtectedRoute isAuthentication={token ? true : false}>
+                  <HomePage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/teachers"
+              element={
+                <ProtectedRoute isAuthentication={token ? true : false}>
+                  <TeachersPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/teachers/:teacher"
+              element={
+                <ProtectedRoute isAuthentication={token ? true : false}>
+                  <TeacherPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/teachers/:teacher/:group"
+              element={
+                <ProtectedRoute isAuthentication={token ? true : false}>
+                  <TeacherPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/teachers/:teacher/:group/:student"
+              element={
+                <ProtectedRoute isAuthentication={token ? true : false}>
+                  <StudentPage />
+                </ProtectedRoute>
+              }
+            />
+          </>
+        )}
+        {token !== null && role === "teacher" && (
+          <>
+            <Route
+              path="/"
+              element={
+                <ProtectedRoute isAuthentication={token ? true : false}>
+                  <TeacherPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/groups/:group"
+              element={
+                <ProtectedRoute isAuthentication={token ? true : false}>
+                  <Group />
+                </ProtectedRoute>
+              }
+            />
+          </>
+        )}
+        {token !== null && role === "student" && (
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute isAuthentication={token ? true : false}>
+                <StudentPage />
+              </ProtectedRoute>
+            }
+          />
+        )}
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
