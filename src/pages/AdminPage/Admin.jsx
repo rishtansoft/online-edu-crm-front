@@ -1,4 +1,5 @@
 import Teachers from "../../components/CreateTeacher/Teachers";
+import ModalCreateTeacher from "../../components/Modal/Modal";
 import "./Admin.css";
 
 // fake teacher
@@ -107,7 +108,7 @@ function Admin() {
     <div className="AdminWrapper">
       <div className="AdminWrapper-header">
         <h2>O'qtuvchilar</h2>
-        <button>+ Teacher</button>
+        <ModalCreateTeacher />
       </div>
       {/* O'qtuvchilar componentasi chaqiriladi  */}
       <Teachers teacher={teacers} />
