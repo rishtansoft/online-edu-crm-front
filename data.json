@@ -1,0 +1,133 @@
+{
+    "teachers": [
+      {
+        "id": 1,
+        "name": "Umar",
+        "surname": "Qosimov",
+        "age": 35,
+        "groups": [
+          {
+            "id": 1,
+            "name": "A-101",
+            "students": [
+              {"id": 1, "name": "Ali", "surname": "Valiyev", "age": 20},
+              {"id": 2, "name": "Vali", "surname": "Ahmedov", "age": 21},
+              {"id": 3, "name": "Davron", "surname": "Olimov", "age": 19},
+              {"id": 4, "name": "Dilrabo", "surname": "Umarova", "age": 21},
+              {"id": 5, "name": "Elbek", "surname": "Yunusov", "age": 19},
+              {"id": 6, "name": "Farrukh", "surname": "Xasanov", "age": 22},
+              {"id": 7, "name": "Gulnoza", "surname": "Xayrullayeva", "age": 20},
+              {"id": 8, "name": "Hasan", "surname": "Ochilov", "age": 22},
+              {"id": 9, "name": "Javohir", "surname": "Nazarov", "age": 19},
+              {"id": 10, "name": "Karim", "surname": "Tashpulatov", "age": 20}
+            ]
+          },
+          {
+            "id": 5,
+            "name": "A-505",
+            "students": [
+                {"id": 11, "name": "Lobar", "surname": "Alimova", "age": 21},
+                {"id": 12, "name": "Mukhammad", "surname": "Xojayev", "age": 19},
+                {"id": 13, "name": "Nigina", "surname": "Qodirova", "age": 22},
+                {"id": 14, "name": "Oybek", "surname": "Xalilov", "age": 20},
+                {"id": 15, "name": "Parviz", "surname": "Yunusxojayev", "age": 19},
+                {"id": 16, "name": "Rasul", "surname": "Zokirov", "age": 20},
+                {"id": 17, "name": "Saida", "surname": "Muxammetova", "age": 21},
+                {"id": 18, "name": "Tahmina", "surname": "Xolmurodova", "age": 19},
+                {"id": 19, "name": "Umid", "surname": "Xamdamov", "age": 21},
+                {"id": 20, "name": "Vohid", "surname": "Umarov", "age": 19}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Zulfiya",
+        "surname": "Rahmonova",
+        "age": 40,
+        "groups": [
+          {
+            "id": 2,
+            "name": "B-201",
+            "students": [
+              {"id": 11, "name": "Lobar", "surname": "Alimova", "age": 21},
+              {"id": 12, "name": "Mukhammad", "surname": "Xojayev", "age": 19},
+              {"id": 13, "name": "Nigina", "surname": "Qodirova", "age": 22},
+              {"id": 14, "name": "Oybek", "surname": "Xalilov", "age": 20},
+              {"id": 15, "name": "Parviz", "surname": "Yunusxojayev", "age": 19},
+              {"id": 16, "name": "Rasul", "surname": "Zokirov", "age": 20},
+              {"id": 17, "name": "Saida", "surname": "Muxammetova", "age": 21},
+              {"id": 18, "name": "Tahmina", "surname": "Xolmurodova", "age": 19},
+              {"id": 19, "name": "Umid", "surname": "Xamdamov", "age": 21},
+              {"id": 20, "name": "Vohid", "surname": "Umarov", "age": 19}
+            ]
+          },
+          {
+            "id": 6,
+            "name": "A-609",
+            "students": [
+              {"id": 1, "name": "Ali", "surname": "Valiyev", "age": 20},
+              {"id": 2, "name": "Vali", "surname": "Ahmedov", "age": 21},
+              {"id": 3, "name": "Davron", "surname": "Olimov", "age": 19},
+              {"id": 4, "name": "Dilrabo", "surname": "Umarova", "age": 21},
+              {"id": 5, "name": "Elbek", "surname": "Yunusov", "age": 19},
+              {"id": 6, "name": "Farrukh", "surname": "Xasanov", "age": 22},
+              {"id": 7, "name": "Gulnoza", "surname": "Xayrullayeva", "age": 20},
+              {"id": 8, "name": "Hasan", "surname": "Ochilov", "age": 22},
+              {"id": 9, "name": "Javohir", "surname": "Nazarov", "age": 19},
+              {"id": 10, "name": "Karim", "surname": "Tashpulatov", "age": 20}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Sobir",
+        "surname": "Usmanov",
+        "age": 38,
+        "groups": [
+          {
+            "id": 3,
+            "name": "C-301",
+            "students": [
+              {"id": 21, "name": "Xurshid", "surname": "Niyozov", "age": 22},
+              {"id": 22, "name": "Yusuf", "surname": "Qosimov", "age": 20},
+              {"id": 23, "name": "Zilola", "surname": "Nurmatova", "age": 22},
+              {"id": 24, "name": "Alisher", "surname": "Valiev", "age": 19},
+              {"id": 25, "name": "Bahodir", "surname": "Usmonov", "age": 20},
+              {"id": 26, "name": "Dinara", "surname": "Xayrullayeva", "age": 21},
+              {"id": 27, "name": "Elyor", "surname": "Toshmatov", "age": 19},
+              {"id": 28, "name": "Farhod", "surname": "Qodirov", "age": 22},
+              {"id": 29, "name": "Gulbahor", "surname": "Tojiboyeva", "age": 20},
+              {"id": 30, "name": "Husan", "surname": "Ochilov", "age": 21}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Nilufar",
+        "surname": "Jalolova",
+        "age": 33,
+        "groups": [
+          {
+            "id": 4,
+            "name": "D-401",
+            "students": [
+              {"id": 31, "name": "Ibrohim", "surname": "Sultonov", "age": 22},
+              {"id": 32, "name": "Zebiniso", "surname": "Rasulova", "age": 20},
+              {"id": 33, "name": "Umida", "surname": "Saidova", "age": 21},
+              {"id": 34, "name": "Sobir", "surname": "Xusanov", "age": 19},
+              {"id": 35, "name": "Xabibulloh", "surname": "Eshonqulov", "age": 22},
+              {"id": 36, "name": "Zulfiya", "surname": "Omonova", "age": 20},
+              {"id": 37, "name": "Oysha", "surname": "Shomurodova", "age": 21},
+              {"id": 38, "name": "Bahromjon", "surname": "Tajiboev", "age": 19},
+              {"id": 39, "name": "Lobar", "surname": "Abduvahobova", "age": 20},
+              {"id": 40, "name": "Nurulloh", "surname": "Usmonov", "age": 21}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

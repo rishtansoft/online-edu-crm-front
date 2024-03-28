@@ -21,7 +21,7 @@ export default function LoginPage() {
         }}
         onClick={() => {
           const token = "dskadasdkfhsdbhgjldshbkchasdbhksadbhsadjas";
-          const role = "student";
+          const role = "admin";
           dispatch(setToken(token));
           dispatch(setRole(role));
           localStorage.setItem("token", token);
