@@ -1,0 +1,124 @@
+.students__heading {
+  padding: 30px 0px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24.2px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: rgb(46, 84, 99);
+}
+.students {
+  width: 700px;
+}
+.students table {
+  display: block;
+}
+.students table thead {
+  width: 100%;
+  background-color: rgba(234, 237, 255, 1);;
+  border-radius: 8px 8px 0px 0px;
+  display: flex;
+}
+.students table thead tr {
+  padding: 13px 20px;
+  width: 100%;
+  display: flex;
+  border-radius: 8px 8px 0px 0px;
+  border: 1px solid rgb(195, 202, 243);
+}
+.students th {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: rgba(38, 70, 83, 1);
+}
+.students table tbody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.students tbody tr {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  border: 1px solid rgb(204, 211, 244);
+}
+.students tbody td {
+  text-align: right;
+  color: rgba(38, 70, 83, 1);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.025em;
+  text-align: left;
+}
+.id {
+  min-width: 19.08%;
+}
+.name {
+  min-width: 50.77%;
+}
+.phone {
+  min-width: 28%;
+}
+.lesson {
+  padding: 16px 20px;
+  background-color:rgba(234, 237, 255, 1);
+  border-radius: 8px;
+  width: 300px;
+}
+.lesson h2 {
+  margin-bottom: 8px;
+  color: rgba(38, 70, 83, 1);
+  opacity: 0.8;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 36.31px;
+  letter-spacing: -0.025em;
+  text-align: left;
+}
+.lesson p {
+    opacity: 0.7;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21.78px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: rgba(38, 70, 83, 1);
+}
+.lessons{
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: max-content;
+    background-color: rgba(234, 237, 255, 0.393);
+}
+.groupInfoTeacher__wrapper{
+    display: flex;
+    gap: 30px;
+    padding: 0 40px;
+}
+.lesson__heading h2{
+    padding: 30px 0px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 24.2px;
+    letter-spacing: -0.025em;
+    text-align: left;
+    color: rgb(48, 89, 105);
+  }
+.lessons button{
+    font-size: 15px;
+    cursor: pointer;
+    color: rgba(46, 84, 99, 0.626);
+    text-align: center;
+    padding: 18px;
+    border: none;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: rgb(198, 205, 247);
+}
