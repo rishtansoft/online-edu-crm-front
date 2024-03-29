@@ -14,7 +14,7 @@ function ModalCreateTeacher() {
   };
   return (
     <div>
-      <button onClick={openModal}>O'qtuvchi Qo'shish</button>
+      <button onClick={openModal}>O'qtuvchi Qo'shish </button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
