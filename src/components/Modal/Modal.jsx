@@ -23,7 +23,7 @@ function ModalCreateTeacher() {
       >
         <>
           <form class="form">
-            <p class="title">Register </p>
+            <p class="title">Register</p>
             <p class="message">Signup now and get full access to our app. </p>
             <div class="flex">
               <label>
