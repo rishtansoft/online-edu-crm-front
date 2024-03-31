@@ -1,4 +1,4 @@
-export default function StudentPage() {
+function StudentPage() {
   return (
     <div>
       <h1 style={{ textAlign: "center", marginTop: "50px" }}>
@@ -7,3 +7,5 @@ export default function StudentPage() {
     </div>
   );
 }
+
+export default StudentPage;
