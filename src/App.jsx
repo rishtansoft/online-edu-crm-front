@@ -10,6 +10,7 @@ import StudentPage from './pages/student';
 import Group from './pages/group';
 import { useSelector } from 'react-redux';
 import StudentsPage from './pages/studends';
+import GroupInfoTeacher from './pages/GroupInfoTeacher';
 function App() {
   const token = useSelector((state) => state.userToken.token);
   const role = useSelector((state) => state.userToken.role);
@@ -99,7 +100,7 @@ function App() {
               path='/groups/:group'
               element={
                 <ProtectedRoute isAuthentication={token ? true : false}>
-                  <Group />
+                  <GroupInfoTeacher />
                 </ProtectedRoute>
               }
             />

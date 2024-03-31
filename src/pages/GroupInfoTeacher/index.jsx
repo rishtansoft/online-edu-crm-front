@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./index.module.css";
 
 function GroupInfoTeacher() {
@@ -6,7 +5,7 @@ function GroupInfoTeacher() {
     <div className={styles.groupInfoTeacher__wrapper}>
       <div className={styles.students}>
         <div className={styles.students__heading}>
-          <h2>O'quvchilar:</h2>
+          <h2>O&lsquo;quvchilar:</h2>
         </div>
         <div className={styles.students__info}>
           <table>
