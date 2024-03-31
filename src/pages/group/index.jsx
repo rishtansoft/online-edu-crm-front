@@ -1,6 +1,12 @@
+import styles from "./index.module.css" 
 
-export default function Group() {
+function Group() {
   return (
-    <div>Group</div>
+    <div>
+      <h1>Group</h1>
+    </div>
   )
 }
+
+export default Group
+
