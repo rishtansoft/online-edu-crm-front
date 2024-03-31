@@ -2,8 +2,6 @@ import styles from './index.module.css';
 import remove from '../../assets/delete.svg';
 import edit from '../../assets/edit.svg';
 import { useState } from 'react';
-import { createPortal } from 'react-dom'; 
-import ModalContent from '../../components/Modal';
 
 function Group() {
   const [showModal, setShowModal] = useState(false);
@@ -54,10 +52,7 @@ function Group() {
       </table>
 
       <button onClick={() => setShowModal(true)}>Guruh qo&#39;shish</button>
-      {showModal && createPortal(
-        <ModalContent onClose={() => setShowModal(false)} />,
-        document.body
-      )}
+      
     </div>
   );
 }

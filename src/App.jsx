@@ -11,6 +11,7 @@ import Group from './pages/Group';
 import { useSelector } from 'react-redux';
 // import StudentsPage from './pages/studends';
 import GroupInfoTeacher from './pages/GroupInfoTeacher';
+import Students from './pages/Students';
 
 function App() {
   const token = useSelector((state) => state.userToken.token);
@@ -71,7 +72,7 @@ function App() {
               path='/teachers/:teacherId/:groupId'
               element={
                 <ProtectedRoute isAuthentication={token ? true : false}>
-                  <StudentsPage />
+                  <Students />
                 </ProtectedRoute>
               }
             />

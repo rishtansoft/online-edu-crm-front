@@ -2,7 +2,6 @@ import styles from './index.module.css';
 import message from '../../assets/message.svg';
 import export1 from '../../assets/export.svg';
 import search from '../../assets/search.svg';
-import data from '../../data/data.json';
 import tolov from '../../assets/tolov.svg';
 
 export default function Students() {
