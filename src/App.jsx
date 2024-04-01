@@ -1,5 +1,5 @@
 import { Route, Routes, Navigate } from "react-router-dom";
-import Home from "./Home";
+import Home from "./components/Pages";
 import Room from "./Room";
 
 function App() {
