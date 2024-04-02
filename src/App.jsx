@@ -1,15 +1,16 @@
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import {Route , Routes} from "react-router-dom"
 import './App.css';
 import LoginPage from './pages/login';
-// import HomePage from "./pages/home";
+import HomePage from "./pages/home";
 import ErrorPage from './pages/errorPage';
 import TeachersPage from './pages/teachers';
 import TeacherPage from './pages/teacher';
 import StudentPage from './pages/student';
 import Group from './pages/Group';
 import { useSelector } from 'react-redux';
-// import StudentsPage from './pages/studends';
+import StudentsPage from './pages/studends';
 import GroupInfoTeacher from './pages/GroupInfoTeacher';
 import Students from './pages/Students';
 
@@ -41,6 +42,8 @@ function App() {
   return (
     <>
       <Routes>
+
+        
         <Route path='/login' element={<LoginPage />} />
         {token !== null && role === 'admin' && (
           <>
