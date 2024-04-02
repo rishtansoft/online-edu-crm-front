@@ -1,52 +1,79 @@
-import styles from './index.module.css';
-import message from '../../assets/message.svg';
-import export1 from '../../assets/export.svg';
-import search from '../../assets/search.svg';
-import tolov from '../../assets/tolov.svg';
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import styles from "./index.module.css";
+import editIcon from "../../assets/edit.svg";
+import deleteIcon from "../../assets/delete.svg";
 
-export default function Students() {
+function TeacherGroupStudents() {
+  const navigate = useNavigate();
+  const { teacherId, groupId } = useParams();
+  const [selectedGroup, setSelectedGroup] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          import.meta.env.VITE_API + "/teachers/" + `${teacherId}`
+        );
+        const data = await response.json();
+        data.groups.map((el) => {
+          if (el.id == groupId) {
+            setSelectedGroup(el);
+          }
+          return el;
+        });
+        setLoading(false);
+      } catch (error) {
+        console.error("Xatolik:", error);
+      }
+    };
+
+    fetchData();
+  }, [teacherId, groupId]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <div className={styles['students']}>
-      <div className={styles['students-top']}>
-        <div className={styles['students-search']}>
-          <img src={search} alt="search" />
-          <input type="search" placeholder='Qidiruv' id="search" />
-        </div>
-        <div className={styles['students-btns']}>
-          <button style={{ background: '#F4A261' }}>
-            <img src={message} alt="message" />
-            Xabar
-          </button>
-          <button>
-            <img src={export1} alt="Export" />
-            Export
-          </button>
-        </div>
-      </div>
-      <table>
+    <div className={styles.teacherInfoWrapper}>
+      <p
+        style={{
+          cursor: "pointer",
+          marginBottom: "15px",
+          color: "red",
+          fontWeight: "900",
+        }}
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
+        Go back
+      </p>
+      <h3 style={{ marginBottom: "15px" }}>
+        O&apos;quvchilar soni({selectedGroup.students.length})
+      </h3>
+      <table className={styles.teacherGroups}>
         <thead>
           <tr>
-            <th><input type="checkbox" /></th>
-            <th>ID</th>
-            <th>Ism Familiya Otasining ismi</th>
-            <th>Guruhi</th>
-            <th>Ustozi</th>
-            <th>Telefon raqami</th>
-            <th>To‘lov</th>
+            <th>Id</th>
+            <th>F.I.Sh</th>
+            <th>Yoshi</th>
+            <th>Amallar</th>
           </tr>
         </thead>
-        <tbody>
-          {data.rows.map((e, i) => (
-            <tr key={i}>
-              <td><input type="checkbox" /></td>
-              <td>{e.id}</td>
-              <td>{e.parents}</td>
-              <td>{e.group}</td>
-              <td>{e.teacher}</td>
-              <td>{e.number}</td>
-              <td style={{ display: 'flex', justifyContent:'space-between', paddingRight:'20px' }}>
-                <button id={`${styles['student-btn']}`}>{e.pay}</button>
-                <img src={tolov} alt="tolov" />
+        <tbody className={styles.tableBody}>
+          {selectedGroup.students.map((student, index) => (
+            <tr key={index}>
+              <td>{student.id}</td>
+              <td>{student.name + " " + student.surname}</td>
+              <td>{student.age}</td>
+              <td>
+                <div className={styles.actionsWrapper}>
+                  <img src={editIcon} width={30} alt="Edit button" />
+                  <img src={deleteIcon} width={30} alt="delete button" />
+                </div>
               </td>
             </tr>
           ))}
@@ -55,3 +82,5 @@ export default function Students() {
     </div>
   );
 }
+
+export default TeacherGroupStudents;

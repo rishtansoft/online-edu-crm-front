@@ -1,17 +1,17 @@
-import { Route, Routes, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
-import './App.css';
-import LoginPage from './pages/login';
+import { Route, Routes, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import "./App.css";
+import LoginPage from "./pages/login";
 // import HomePage from "./pages/home";
-import ErrorPage from './pages/errorPage';
-import TeachersPage from './pages/teachers';
-import TeacherPage from './pages/teacher';
-import StudentPage from './pages/student';
-import Group from './pages/Group';
-import { useSelector } from 'react-redux';
+import ErrorPage from "./pages/errorPage";
+import TeachersPage from "./pages/teachers";
+import TeacherPage from "./pages/teacher";
+import StudentPage from "./pages/student";
+import TeacherGroup from "./pages/TeacherGroup";
+import { useSelector } from "react-redux";
 // import StudentsPage from './pages/studends';
-import GroupInfoTeacher from './pages/GroupInfoTeacher';
-import Students from './pages/Students';
+import GroupInfoTeacher from "./pages/GroupInfoTeacher";
+import Students from "./pages/Students";
 
 function App() {
   const token = useSelector((state) => state.userToken.token);
@@ -19,14 +19,14 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!localStorage.getItem('token')) {
-      navigate('/login');
+    if (!localStorage.getItem("token")) {
+      navigate("/login");
     }
   }, []);
 
   function ProtectedRoute({
     children,
-    redirectTo = '/login',
+    redirectTo = "/login",
     isAuthentication,
   }) {
     useEffect(() => {
@@ -41,11 +41,11 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/login' element={<LoginPage />} />
-        {token !== null && role === 'admin' && (
+        <Route path="/login" element={<LoginPage />} />
+        {token !== null && role === "admin" && (
           <>
             <Route
-              path='/'
+              path="/"
               element={
                 <ProtectedRoute isAuthentication={token ? true : false}>
                   <TeachersPage />
@@ -53,7 +53,7 @@ function App() {
               }
             />
             <Route
-              path='/teachers'
+              path="/teachers"
               element={
                 <ProtectedRoute isAuthentication={token ? true : false}>
                   <TeachersPage />
@@ -61,15 +61,15 @@ function App() {
               }
             />
             <Route
-              path='/teachers/:teacherId'
+              path="/teachers/:teacherId"
               element={
                 <ProtectedRoute isAuthentication={token ? true : false}>
-                  <Group />
+                  <TeacherGroup />
                 </ProtectedRoute>
               }
             />
             <Route
-              path='/teachers/:teacherId/:groupId'
+              path="/teachers/:teacherId/:groupId"
               element={
                 <ProtectedRoute isAuthentication={token ? true : false}>
                   <Students />
@@ -77,22 +77,19 @@ function App() {
               }
             />
             <Route
-              path='/teachers/:teacherId/:groupId/:studentId'
+              path="/teachers/:teacherId/:groupId/:studentId"
               element={
                 <ProtectedRoute isAuthentication={token ? true : false}>
                   <StudentPage />
                 </ProtectedRoute>
               }
             />
-            
-
-
           </>
         )}
-        {token !== null && role === 'teacher' && (
+        {token !== null && role === "teacher" && (
           <>
             <Route
-              path='/'
+              path="/"
               element={
                 <ProtectedRoute isAuthentication={token ? true : false}>
                   <TeacherPage />
@@ -100,7 +97,7 @@ function App() {
               }
             />
             <Route
-              path='/groups/:group'
+              path="/groups/:group"
               element={
                 <ProtectedRoute isAuthentication={token ? true : false}>
                   <GroupInfoTeacher />
@@ -109,9 +106,9 @@ function App() {
             />
           </>
         )}
-        {token !== null && role === 'student' && (
+        {token !== null && role === "student" && (
           <Route
-            path='/'
+            path="/"
             element={
               <ProtectedRoute isAuthentication={token ? true : false}>
                 <StudentPage />
@@ -119,7 +116,7 @@ function App() {
             }
           />
         )}
-        <Route path='*' element={<ErrorPage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
   );

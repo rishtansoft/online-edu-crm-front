@@ -1,4 +1,3 @@
-import React from 'react'
 import edit from '../../assets/edit.svg'
 import styles from './index.module.css'
 import human from '../../assets/human.png'

@@ -19,7 +19,7 @@ function Teacher() {
             <tr>
               <th>ID</th>
               <th>Guruh</th>
-              <th>O'quvchilar soni</th>
+              <th>O&apos;quvchilar soni</th>
               <th>Dars Kunlari</th>
               <th>Dars vaqti</th>
             </tr>

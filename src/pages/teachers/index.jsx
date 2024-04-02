@@ -39,7 +39,7 @@ export default function TeachersPage() {
             <h2
               style={{ textAlign: "center", color: "red", cursor: "pointer" }}
               onClick={() => {
-                navigate(`teachers/${teacher.id}`);
+                navigate(`/teachers/${teacher.id}`);
               }}
             >
               {teacher.name} {teacher.surname}
